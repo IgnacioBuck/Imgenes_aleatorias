@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Imágenes Aleatorias</title>
+    <style>
+        #image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="random-image" src="" alt="Imagen Aleatoria">
+        <br>
+        <button onclick="changeImage()">Cambiar Imagen</button>
+    </div>
+
+    <script>
+        // Lista de rutas de tus imágenes
+        const images = [
+            'imagenes/imagen1.png',
+            'imagenes/imagen2.png',
+            'imagenes/imagen3.png',
+            'imagenes/imagen4.png',
+            'imagenes/imagen5.png',
+            'imagenes/imagen6.png',
+            'imagenes/imagen7.png',
+            'imagenes/imagen8.png',
+            'imagenes/imagen9.png',
+            'imagenes/imagen10.png',
+            'imagenes/imagen11.png',
+            'imagenes/imagen12.png',
+            'imagenes/imagen13.png',
+            'imagenes/imagen14.png',
+            'imagenes/imagen15.png',
+            'imagenes/imagen16.png',
+            'imagenes/imagen17.png',
+            'imagenes/imagen18.png',
+            'imagenes/imagen19.png',
+            'imagenes/imagen20.png',
+            'imagenes/imagen21.png',
+            'imagenes/imagen22.png',
+            'imagenes/imagen23.png',
+            'imagenes/imagen24.png',
+            'imagenes/imagen25.png',
+            'imagenes/imagen26.png',
+            'imagenes/imagen27.png',
+            'imagenes/imagen28.png',
+            'imagenes/imagen29.png',
+            'imagenes/imagen30.png',
+            'imagenes/imagen31.png',
+            'imagenes/imagen32.png',
+            'imagenes/imagen33.png',
+            'imagenes/imagen34.png',
+            'imagenes/imagen35.png',
+        ];
+
+        // Función para cambiar la imagen
+        function changeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('random-image').src = images[randomIndex];
+        }
+
+        // Carga una imagen aleatoria al cargar la página
+        window.onload = changeImage;
+    </script>
+</body>
+</html>
